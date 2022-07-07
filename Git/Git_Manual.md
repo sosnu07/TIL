@@ -1,4 +1,4 @@
-# Git bash 기본 명령어 정리
+g# Git bash 기본 명령어 정리
 
 ---
 * Git 을 공부하면서 사용되는 명령어들을 정리하기 위해 쓴 문서 
@@ -133,4 +133,12 @@ $ git remote add origin 저장소 주소
 * 연결된 저장소 확인
 ![img.png](img/chk_current_repo.png)
 
-#### 참고: git remote 명령어 
+### git add 한 파일  취소
+```linux
+$ git reset HEAD 파일명 혹은 폴더명
+```
+
+### git add 한 파일 전체 취소
+```linux
+$ git reset HEAD
+```
