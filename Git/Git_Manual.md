@@ -104,3 +104,33 @@ git rm -r --cached 삭제할 폴더
 ```
 
 >삭제후 commit & push 필수
+
+
+### git 원격 저장소 연결 및 끊기 (git remote)
+
+#### 현재 연결된 저장소 확인
+
+```linux
+$ git remote -v
+```
+
+![img.png](img/current_repo.png)
+
+#### 저장소 끊기
+
+```linux
+$ git remote remove origin
+```
+* 연결된 저장소를 확인해보면 없는것이 확인됨 
+![img.png](img/chk_del_repo.png)
+
+
+#### 저장소 연결
+
+```linux
+$ git remote add origin 저장소 주소
+```
+* 연결된 저장소 확인
+![img.png](img/chk_current_repo.png)
+
+#### 참고: git remote 명령어 
