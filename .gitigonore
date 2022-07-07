@@ -245,6 +245,6 @@ dist
 .pnp.*
 
 # lectureMaterials del
-lectureMaterials/
+Blockchain/createNFT/lectureMaterials/
 
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij+iml,solidity
