@@ -1,6 +1,5 @@
 const Wallet = require("ethereumjs-wallet");
 const fs = require("fs");
-var crypto = require('crypto');
 
 /**
  * 이더 지갑 생성 및 저장
