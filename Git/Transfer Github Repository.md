@@ -68,16 +68,34 @@ fatal: unable to access 'https://github.com/sosnu07/TIL.git/': The requested URL
 
 ### 해결 방법
 1. 제어판 - 사용자 계정 - 자격 증명 관리자(Windows 자격 증명 관리)로 접속한다.
+
     ![sol](https://t1.daumcdn.net/cfile/tistory/99B5E33359E5BFEF0A)
+
     ![sol](https://t1.daumcdn.net/cfile/tistory/991DCE3359E5BFF01D)
+
     ![sol](https://t1.daumcdn.net/cfile/tistory/9958763359E5BFF015)
     
 
 2. git:https://github.com - 편집 으로 들어간다.
+
+
    ![sol](https://t1.daumcdn.net/cfile/tistory/99FCFD3359E5BFF102)
 
 
 3. 사용자 이름을 [**새로운 계정**]으로 바꿔주고 비밀번호를 적어준다. 비밀번호는 깃허브의 토큰 비밀번호를 적어준다
    - 여기서 약간 궁금한게. 일단 나는 깃허브에서 토큰을 하나만 사용하는 중인데, 만약 토큰을 여러개 사용하는 경우에는 토큰 이름이랑 토큰 비밀번호랑 그렇게 넣어줘야 하려나...?
    - 일단은 계정이름이랑 토큰 비밀번호 넣으니까 push가 잘 이루어진다.
+
+   
    ![sol](https://t1.daumcdn.net/cfile/tistory/99221C3359E5BFF11C)
+
+
+---
+
+reference
+
+* 저장소 이동관련 레퍼런스
+https://lxxyeon.tistory.com/99
+
+* 오류 해결 관련 레퍼런스
+https://recoveryman.tistory.com/392
