@@ -12,7 +12,7 @@ To push the current branch and set the remote as upstream, use
     git push --set-upstream origin master
 ```
 
-## What is the cause?
+## What is the problem?
 
 - 우선 에러메세지 자체를 해석해보자. 
 현재 설정된 master 브랜치가 upstream branch를 가지고 있지 않으니 사용하려면 설정하라는 문구다
