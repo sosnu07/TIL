@@ -36,41 +36,84 @@ https://docs.github.com/en/get-started/using-git/dealing-with-non-fast-forward-e
 
 일단 공식문서를 뒤져봤더니 이 에러는 다른 사람이 같은 `branch`로 `push`를 할때 발생하는 문제라고 한다.
 
-이해를 제대로     못하긴 했는데 
-내 branch에 commit이 남아있는 상황에서 다른 사람이 push를 때려버리면 내가 commit 해놓은 내용이 날아가니깐, 그걸 방지하려고 한 refuse 시킨 모양. 
+이해를 제대로 못하긴 했는데 
+내 `branch`에 `commit`이 남아있는 상황에서 다른 사람이 `push`를 때려버리면 내가 commit 해놓은 내용이 날아가니깐, 그걸 방지하려고 한 refuse 시킨 모양. 
 
 ~~**아 제대로 이해 못하니 스팀오르네... ㅜ 다음에 또 이런문제 발생하면 그때 두고보자...**~~
 
 ## 해결
 
 일단 나는 아래의 명령어를 통해 해결을 하긴 했다.  
+
 ```linux
 $ git push origin +main // my branch name is main
 ```
+
+## <span style="color:red"> 여기서 사용한 + 명령어는 사용하지 말자</span>
+
+git doc 에서 push 항목을 살펴보면 ( https://git-scm.com/docs/git-push )
+
+**`+` 명령어와 `--force` 명령어가 동일한 것이라고 나와있다.**
+
+>Pushing an empty <src> allows you to delete the <dst> ref from the remote repository. Deletions are always accepted without a leading  <span style="color:red"> + in the refspec (or --force)</span>, except when forbidden by configuration or hooks.
+
+그러니깐 결국 문제생길것을 감수하고 그대로 밀어버리는 명령어였던 것... 
+
+레퍼런스 블로그에서 이 명령어를 실행하는 바람에 협업할때 다른 사람들이 쓰는 `branch`가 날아갔다고 아우성인걸 보면... 일단 force는 쓰지말자
+( 지인들한테도 썼다고 했다가 혼났다 )
+
+**그리고 이렇게 말이 나오는걸 보니 이 에러는 commit 할때 branch가 꼬여서 나오는 문제가 맞는듯 하다**
+
+---
+1. 
+다른 해결책으로는 `pull`을 할때 `–allow-unrelated-histories` 옵션을 추가해서 관련없는 두 저장소를 병합하도록 허용하는 방식.
+
+git 에서는 서로 관련 기록이 없는 이질적인 두 프로젝트를 병합할때 기본적으로 거부하는데, 원격 저장소의 내용을 끌어오면서 로컬 저장소와 merge할 수 있도록 해주는 기능
+
+
+```linux
+$ git pull origin master --allow-unrelated-histories
+```
+
+이후 add, commit, push 하면 정상적으로 작동
+
+
+
 
 ## 정리 
 
 1. 원격 저장소랑 로컬 저장소의 불일치 상태에서 `push` 하는 바람에 발생한 문제
 2. 다른 사람이 같은 `branch`로 `push`를 할때 내 `branch`에서 `commit` 한 내용이 있으면 이에 대한 소실을 막기위해 발생하는 에러
+3. 혼자하는 작업이라면 바로 원격 저장소로 `push --force`하여 밀어버려도 상관없다
+   1. 협업중이라면 한쪽 `branch`가 날아갈거라 일단 원격저장소에 있는 내용을 `pull`로 땡기고, 이 과정에서 `--allow-unrelated-histories` 옵션을 추가하여 로컬저장소의 내용을 원격저장소의 내용과 `merge`시켜준다. 
+4. 그런데 이러면 로컬에서 `force`하는것과 똑같지 않나 싶은...
 
-둘 중 한가지가 원인인거 같긴한데 정확히는 모르겠고, 같은 상황을 도출시켜보려고 해도 못하는 상황이니
 
-그냥 다음에 이 에러 한번 더 터지면 그때 봅시다....ㅎ
+**내일 다시 보고 정리하기**
 
-
+**`3-way-merge` 개념 정리하기** 
 
 ---
 
 ## reference
 
-**해결법을 찾은 블로그** 
+ 
 
-https://somjang.tistory.com/entry/Git-rejected-master-master-non-fast-forward-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95
+~~https://somjang.tistory.com/entry/Git-rejected-master-master-non-fast-forward-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95~~
 
-**문제에 대해 분석을 해보고 여러가지 방법으로 시도한 블로그** 
+여기 블로그 글은 강제로 밀어버려서 문제 발생의 소지가 높음.
 
-https://velog.io/@rain98/%EA%B9%83%ED%97%88%EB%B8%8C-non-fast-forward-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0
+---
 
-**github 공식문서** 
+**여기 글 참고**
 
-https://docs.github.com/en/get-started/using-git/dealing-with-non-fast-forward-errors
+https://devlimk1.tistory.com/147
+
+
+**이게 제일 설명 잘되어있음**
+
+https://jobc.tistory.com/177
+
+**`3-way-merge`개념 설명**
+
+https://wonyong-jang.github.io/git/2021/02/05/Github-Merge.html
