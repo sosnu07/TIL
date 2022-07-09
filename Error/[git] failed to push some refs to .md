@@ -3,12 +3,12 @@
 
 ## 문제 상황
 
-* .gitignore 를 잘못건드렸는지 인텔리제이의 프로젝트 항목이 싹 안보이는 상황이 발생
-* 로컬 폴더에 파일들이 싹다 사라진게 아니라 project 에 표시만 안되는 상황
-* 경험상으로 .idea 폴더를 삭제하고 재실행시키면 .idea 폴더가 초기화되면서 다시 세팅되기에 바로 .idea 폴더 삭제
+1. gitignore 를 잘못건드렸는지 인텔리제이의 프로젝트 항목이 싹 안보이는 상황이 발생 
+2. 로컬 폴더에 파일들이 싹다 사라진게 아니라 project 에 표시만 안되는 상황 
+3. 경험상으로 .idea 폴더를 삭제하고 재실행시키면 .idea 폴더가 초기화되면서 다시 세팅되기에 바로 .idea 폴더 삭제
   * 지인한테 혼남. .idea 폴더 막 지우는거 아니라고...
   * **Project 란에서 파일이 보이지 않는 경우에는 Project Structure 가서 설정하면 보인다고 함** 
-* 그리고 add -A, commit, push 를 했더니 갑자기 에러발생  
+4. 그리고 add -A, commit, push 를 했더니 갑자기 에러발생  
 
 ```linux
 To https://github.com/sosnu07/TIL.git
@@ -24,11 +24,11 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 ## 원인
 
-#### <span style="color:red"> github repo 와 local repo 사이의 내용 불일치 상태에서 push를 할 경우 발생. </span>
-#### 보통 협업할 때 같은 branch 에 2명 이상의 사람이 push 를 한경우 발생하는 문제
+#### <span style="color:red"> github repo 와 local repo 사이의 내용 불일치 상태에서 push를 할 경우 발생하는 문제. </span>
+#### 보통 협업할 때 같은 branch 에 2명 이상의 사람이 push 를 한 경우 종종 발생
 * 원격저장소에 **로컬에는 없는 파일이 존재할 경우** 내 파일을 push 할 떄 발생하는 에러
   * 보통은 local 이 origin 보다 파일이 더 많음. 
-* git 의 입장에서는 어느 쪽 repo 가 원본인지 파악을 할 수 없기 때문에 error 를 내는 것. 
+* **git 의 입장에서는 어느 쪽 repo 가 원본인지 파악을 할 수 없기 때문에 error 를 내는 것.** 
 * 원격저장소에서 내 로컬에 저장하지 않은 파일을 pull 한 후 원격저장소에 다시 push 를 진행해야 한다.
 
 
@@ -36,7 +36,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 1. github 에 f1.js 라는 파일이 push 되어있는 상황 
 2. 팀원이 같은 branch 에 f2.js 라는 파일을 push.
-3. 내가 f1.js 파일을 수정하여 push 를 한다. 
+3. 내가 f1.js 파일을 수정하여 push.
 4.ㅇ
 
 

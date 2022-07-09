@@ -32,15 +32,14 @@
 
 ---
 ### Git
-* Do it 깃 & 깃허브 입문
-  * 
+
+
+
+* [우아한 형제들 프론트에서 사용하는 git-flow 전략](https://techblog.woowahan.com/2553/)
 
 ---
 ### Java
 * 자바의 정석
-    * d
-    * d
-    * 
 
 ---
 ### Spring
