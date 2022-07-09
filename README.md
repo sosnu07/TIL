@@ -49,7 +49,7 @@
 
 ---
 ### JavaScripts
-
+* [기초개념정리](https://github.com/sosnu07/TIL/blob/main/Programing%20Language/JavaScript/JavaScript%20200%EC%A0%9C/summary/%EA%B8%B0%EC%B4%88%20%EA%B0%9C%EB%85%90%20%EC%A0%95%EB%A6%AC.md) 
 ---
 ### Node.js
 
