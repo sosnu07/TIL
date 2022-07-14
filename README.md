@@ -49,7 +49,9 @@
 
 ---
 ### JavaScripts
-* [기초개념정리](https://github.com/sosnu07/TIL/blob/main/Programing%20Language/JavaScript/JavaScript%20200%EC%A0%9C/summary/%EA%B8%B0%EC%B4%88%20%EA%B0%9C%EB%85%90%20%EC%A0%95%EB%A6%AC.md) 
+* [기초개념정리](https://github.com/sosnu07/TIL/blob/main/Programing%20Language/JavaScript/JavaScript%20200%EC%A0%9C/summary/%EA%B8%B0%EC%B4%88%20%EA%B0%9C%EB%85%90%20%EC%A0%95%EB%A6%AC.md)
+
+[CSR / SSR 개념 정리](https://github.com/sosnu07/TIL/blob/main/JavaScript/CSR%EC%99%80%20SSR%20%EC%B0%A8%EC%9D%B4.md)
 ---
 ### Node.js
 
