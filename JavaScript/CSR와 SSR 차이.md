@@ -74,6 +74,8 @@
 
 ### CSR 장점
 1. 필요한 데이터만 백엔드에서 가져오기 떄문에 서버 부하가 덜하다. 
+2. 한번 로딩되고 나면 그 이후는 속도가 빠르다. 
+3. SPA 방식을 이용하기 위한 첫번째 단계. (장점이라기보다 특징?)
 
 ### CSR 문제점
 1. HTML 파일이 텅 비어있다
@@ -136,3 +138,30 @@
    * 정적 페이지 방식과 유사하여 깜박임 문제(Blinking issue)가 여전히 존재. 
    * 서버 과부하 문제가 발생 가능성 존재
    * HTML을 받고 JS파일들은 하나씩 넘겨받는데다 사용자가 웹페이지와 상호작용을 하기 위한 JS 파일의 우선순위는 가장 낮기에 과부하 문제가 발생하면 이 파일들을 제대로 받아오지 못하는 경우 발생. 화면 먹통상황
+
+
+---
+### Reference
+
+[CSR과 SSR 이해하기](https://onlydev.tistory.com/102)
+
+[서버 사이드 렌더링(SSR)과 클라이언트 사이드 렌더링(CSR)이란?](https://ctdlog.tistory.com/46)
+
+[SSR vs CSR 비교 설명, NEXT.JS가 탄생한 이유](https://www.sarah-note.com/%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9/posting2/)
+
+
+#### 코딩 알려주는 누나
+[리액트 vs Next JS vs Gatsby 언제 뭘 써야하지? | CSR vs SSR vs SSG 내 프로젝트 분석하고 맞는 기술스택 선택하는법!](https://www.youtube.com/watch?v=C6kiIkrBdyE)
+
+#### 드림코딩 엘리
+[서버사이드 렌더링 (개발자라면 상식으로 알고 있어야 하는 개념 정리 ⭐️)](https://www.youtube.com/watch?v=iZ9csAfU5Os)
+
+#### 노마드 코더
+
+
+[응 너만 몰라. 리액트 프레임워크 TOP 3](https://www.youtube.com/watch?v=RP8nvTeurbQ)
+
+
+#### 우아한 TECH
+
+[10분 테코톡 - 신세한탄의 CSR & SSR](https://www.youtube.com/watch?v=YuqB8D6eCKE)
