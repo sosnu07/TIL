@@ -14,7 +14,7 @@ typeof null;                // "object", 구현버그랍니다~
 typeof undefined;           // "undefined"
 !null;                      // true
 null + 1;                   // 1, 빈 통에 1을 넣어줬으니 1이 등장
-undefined + 1;              // NaN, 나 선언 안되어있어요 선생님
+undefined + 1;              // NaN
 
 let a;
 console.log(a);             // undefined
@@ -47,11 +47,15 @@ console.log(a);             // undefined
 * <span style="background-color:#fff5b1">ECMAScript 사양에서 변수는 **선언한다.** 라고 표현하고, 함수는 **정의한다.** 라고 표현한다.</span> 
 
 ## null
-`null`은 원시값(Primitive Type) 중 하나로, 어떤 값이 의도적으로 **비어있음**을 의미한다.
+`null`은 원시값(Primitive Type) 중 하나로, 어떤 값이 의도적으로 **비어있음**을 의미한다.(의도적 부재)
 <span style="background-color:#fff5b1">`undefined`는 값이 지정되어 있지 않음을 의미한다면, `null`은 해당 변수가 어떤 객체도 가리키고 있지 않음을 의미.</span> 
 
 > `null`은 `undefined`처럼 전역 객체의 속성 중 하나가 아니라 리터럴 값이다.
 
+
+### 추가 삽입
+* 변수에 `null`을 할당하는 것은 변수가 이전에 참조하던 값을 더이상 참조하지 않겠다는 의미. 
+* 이는 이전에 할당되어 있던 값에 대한 참조를 명시적으로 제거하는 것을 의미하며, 자바스크립트 엔진은 누구도 참조하지 않은 메모리 공간에 대해 **가비지 컬렉션**을 수행. 
 ---
 
 ## 정리
